@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var lbName: UILabel!
-    @IBOutlet weak var btnName: UIButton!
+
     
 
     override func viewDidLoad() {
@@ -21,6 +21,9 @@ class ViewController: UIViewController {
 
     @IBAction func btnConfirmClicked(_ sender: Any) {
         lbName.text="zyouking"
+        
+        let button=sender as! UIButton
+        button.setTitle("OK", for: UIControl.State.normal)
     }
     
     
