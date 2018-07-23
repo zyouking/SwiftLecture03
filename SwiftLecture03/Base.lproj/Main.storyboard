@@ -40,11 +40,14 @@
                                 <rect key="frame" x="16" y="114" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5Tt-Jn-uva">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5Tt-Jn-uva">
                                 <rect key="frame" x="16" y="183" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jfi-mT-r2e"/>
+                                </connections>
                             </stepper>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jDd-Mz-rma">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jDd-Mz-rma">
                                 <rect key="frame" x="16" y="245" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
@@ -66,7 +69,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="addScoreStepper" destination="5Tt-Jn-uva" id="KcK-XD-98T"/>
                         <outlet property="lbName" destination="HcF-sI-QKx" id="c7t-eA-p2g"/>
+                        <outlet property="scoreSlider" destination="jDd-Mz-rma" id="NwG-Ad-aCW"/>
+                        <outlet property="switchStatus" destination="Crx-Nn-qzJ" id="uQ4-Ee-xC8"/>
                         <outlet property="touchViewer" destination="ACQ-0p-ayI" id="GB0-bv-9jR"/>
                     </connections>
                 </viewController>

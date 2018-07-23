@@ -12,8 +12,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lbName: UILabel!
 
+    @IBOutlet weak var switchStatus: UISwitch!
     
+    @IBOutlet weak var scoreSlider: UISlider!
     @IBOutlet weak var touchViewer: UIView!
+    
+    @IBOutlet weak var addScoreStepper: UIStepper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +46,16 @@ class ViewController: UIViewController {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("touchesEnded")
+    }
+    
+    
+    @IBAction func stepperChanged(_ sender: Any) {
+        print("\(addScoreStepper.value)")
+        
+        let value=Int.init(addScoreStepper.value)
+        scoreSlider.value=Float(value)
+        
+        //scoreSlider.value = addScoreStepper.value
     }
     
     
