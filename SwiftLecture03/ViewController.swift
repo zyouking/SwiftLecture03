@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         if let touch=touches.first{
             let loc=touch.location(in: self.touchViewer)
             print("\(loc)")
-            if(self.touchViewer.frame.contains(loc)){
+            if(self.touchViewer.bounds.contains(loc)){
                 self.touchViewer.backgroundColor=UIColor.red
             }else{
                 self.touchViewer.backgroundColor=UIColor.blue
