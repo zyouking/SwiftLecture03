@@ -52,8 +52,9 @@ class ViewController: UIViewController {
     @IBAction func stepperChanged(_ sender: Any) {
         print("\(addScoreStepper.value)")
         
-        let value=Int.init(addScoreStepper.value)
-        scoreSlider.value=Float(value)
+//        let value=Int.init(addScoreStepper.value)
+//        scoreSlider.value=Float(value)
+        scoreSlider.value=Float(addScoreStepper.value)
         
         //scoreSlider.value = addScoreStepper.value
     }
